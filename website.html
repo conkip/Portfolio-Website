@@ -1,0 +1,70 @@
+<!-- 
+ So far this was only generated with AI.
+ Uses React and Tailwind CSS (plus shadcn/ui components)
+-->
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 p-6">
+      {/* Header */}
+      <header className="text-center mb-12">
+        <h1 className="text-4xl font-bold mb-2">Connor Kippes</h1>
+        <p className="text-lg text-gray-600">Computer Science Student & Developer</p>
+        <div className="flex justify-center gap-4 mt-4">
+          <a href="https://github.com/conkip" target="_blank" rel="noopener noreferrer">
+            <Github className="w-6 h-6" />
+          </a>
+          <a href="https://linkedin.com/in/connor-kippes" target="_blank" rel="noopener noreferrer">
+            <Linkedin className="w-6 h-6" />
+          </a>
+          <a href="mailto:connorkippes1@gmail.com">
+            <Mail className="w-6 h-6" />
+          </a>
+        </div>
+      </header>
+
+      {/* Projects */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold mb-2">Project Title 1</h3>
+              <p className="text-gray-600 mb-4">Brief description of what the project does and technologies used.</p>
+              <a href="https://github.com/conkip/project1" target="_blank">
+                <Button>View on GitHub</Button>
+              </a>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold mb-2">Project Title 2</h3>
+              <p className="text-gray-600 mb-4">Brief description of what the project does and technologies used.</p>
+              <a href="https://github.com/conkip/project2" target="_blank">
+                <Button>View on GitHub</Button>
+              </a>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold mb-2">Project Title 3</h3>
+              <p className="text-gray-600 mb-4">Brief description of what the project does and technologies used.</p>
+              <a href="https://github.com/conkip/project3" target="_blank">
+                <Button>View on GitHub</Button>
+              </a>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-500 mt-16">
+        &copy; {new Date().getFullYear()} Connor Kippes. All rights reserved.
+      </footer>
+    </div>
+  );
+}
